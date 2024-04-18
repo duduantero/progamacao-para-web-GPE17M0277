@@ -1,6 +1,11 @@
 const express = require ('express');
 const app =  express();
 
+const PORT = 8080;
+app.listen(PORT,function () {
+    console.log('App rodando na porta ' + PORT);
+});
+
 app.get('/',function(req,res){
     res.send('Página inicial');
 });
@@ -17,8 +22,4 @@ app.get('/verificar-numero-primo:n',function(req,res){
     let n = req.params.n;
     
     res.send('Olá, mundo!');
-});
-const PORT = 8080;
-app.listen(PORT,function () {
-    console.log('App rodando na porta ' + PORT);
 });
