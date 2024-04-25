@@ -22,7 +22,11 @@ function removerProdutos(id){
 }
 
 function atualizarProduto(id,qtd){
-    
+    produtos.forEach(p => {
+        if(p.id == id ){
+            p.qtd = qtd;
+        }
+    });
     
 }
 

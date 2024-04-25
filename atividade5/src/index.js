@@ -28,7 +28,7 @@ app.get ('/atualizar/:id/:qtd',function(res,req){
     let id = req.params.id;
     let qtd = req.params.qtd;
     atualizarProduto(id,qtd);
-    
+    res.send(id);
 })
 
 const PORT = 8080;
